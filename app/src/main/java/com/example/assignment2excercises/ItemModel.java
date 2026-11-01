@@ -12,6 +12,7 @@ public class ItemModel implements Serializable {
     private double price;
     private String documentId;
 
+    // Base constructor
     public ItemModel() {}
 
     // Complete constructor

@@ -45,6 +45,7 @@ public class NewFood extends AppCompatActivity {
         // Create firestore instance
         db = FirebaseFirestore.getInstance();
 
+        // Layout references
         btnAddFood = findViewById(R.id.btnAddFood);
         etName = findViewById(R.id.etFoodName);
         etColour = findViewById(R.id.etFoodColour);
@@ -80,6 +81,7 @@ public class NewFood extends AppCompatActivity {
                                 Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                             }
                         })
+                        // Log an error if there is a problem creating a new record in the database
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
